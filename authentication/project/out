@@ -1,0 +1,57 @@
+>     ttl=8760h
+WARNING! The following warnings were returned from Vault:
+
+  * This mount hasn't configured any authority information access (AIA)
+  fields; this may make it harder for systems to find missing certificates
+  in the chain or to validate revocation status of certificates. Consider
+  updating /config/urls or the newly generated issuer with this information.
+
+Key              Value
+---              -----
+certificate      -----BEGIN CERTIFICATE-----
+MIIDPjCCAiagAwIBAgIUeAsXfTS96r2+knSgeGR1DRA55i8wDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAxMOY2VudHJhbGl6ZXIuaW8wHhcNMjMwMTExMjIzMzMzWhcN
+MjQwMTExMjIzNDAyWjAZMRcwFQYDVQQDEw5jZW50cmFsaXplci5pbzCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBANRgeXnyiP9+4wHvZCGGoD0Ap+qiccxa
+2IdK3ZW3qaC+jFQAK3A61srEhxOEsTbMKijd1tg3uJNVSSYLcnZYRJVDIgQ1gJS4
+8GkZYOH5FbyqSh4DINnojnZHBENPq2vaIP3T9duiy3/foLca7anmW8jf3HJyUlbm
+9F8bABfLUxJQT24MjOzgdzHwpGwul/UeBXQP+OaXVDpm2CbXpHxU83t51xomPvGa
+ufEn4KcpMmX9sPT5uy4tb9HiASEpjiBd4BAKkLeqPuthm4tMJZgCP1ywLg8oTYVR
+h9N05e4cBhc+DmTnosyD3cCnlX7wzFxFGwhkDBR2s3Hcyk8o/DT3eJ8CAwEAAaN+
+MHwwDgYDVR0PAQH/BAQDAgEGMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFPgm
+qfqHmo/3NYXfFV9zfXoe3IkGMB8GA1UdIwQYMBaAFPgmqfqHmo/3NYXfFV9zfXoe
+3IkGMBkGA1UdEQQSMBCCDmNlbnRyYWxpemVyLmlvMA0GCSqGSIb3DQEBCwUAA4IB
+AQBdZqzyOgofd1KXhMfq+2LM2wG/JPHojwtrd8ubMWFuzON9lqlBTuIRCNuMPtnZ
+7NeC9wuU2mthqsCsw0D78k5YHj57RLfUWKl0Rsa9/06iKoW7pIogrSwHAVTQXuwq
+ekjUNfk90XNCKw7whoU4m3MffSDJvl4jsS9sziG08Wp/t8oBB7GrhwKH9b2wNvKB
+R8aHopZUODIqFf9+MHdX/H57UfRJL4tYnDTkWWvcgVt4bFN5IHhl2iqS3RiAmO9F
+GyOdrGyG+zlO94oTd0/SG0mU7OljR2C3+PSbS8zRfyClC3nNuCLc632s0GU2vinv
+13sikthsHZ+8N8EB2d8yu0BZ
+-----END CERTIFICATE-----
+expiration       1705012442
+issuer_id        5c4f35c9-e04b-0944-ce2b-5898ff317640
+issuer_name      n/a
+issuing_ca       -----BEGIN CERTIFICATE-----
+MIIDPjCCAiagAwIBAgIUeAsXfTS96r2+knSgeGR1DRA55i8wDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAxMOY2VudHJhbGl6ZXIuaW8wHhcNMjMwMTExMjIzMzMzWhcN
+MjQwMTExMjIzNDAyWjAZMRcwFQYDVQQDEw5jZW50cmFsaXplci5pbzCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBANRgeXnyiP9+4wHvZCGGoD0Ap+qiccxa
+2IdK3ZW3qaC+jFQAK3A61srEhxOEsTbMKijd1tg3uJNVSSYLcnZYRJVDIgQ1gJS4
+8GkZYOH5FbyqSh4DINnojnZHBENPq2vaIP3T9duiy3/foLca7anmW8jf3HJyUlbm
+9F8bABfLUxJQT24MjOzgdzHwpGwul/UeBXQP+OaXVDpm2CbXpHxU83t51xomPvGa
+ufEn4KcpMmX9sPT5uy4tb9HiASEpjiBd4BAKkLeqPuthm4tMJZgCP1ywLg8oTYVR
+h9N05e4cBhc+DmTnosyD3cCnlX7wzFxFGwhkDBR2s3Hcyk8o/DT3eJ8CAwEAAaN+
+MHwwDgYDVR0PAQH/BAQDAgEGMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFPgm
+qfqHmo/3NYXfFV9zfXoe3IkGMB8GA1UdIwQYMBaAFPgmqfqHmo/3NYXfFV9zfXoe
+3IkGMBkGA1UdEQQSMBCCDmNlbnRyYWxpemVyLmlvMA0GCSqGSIb3DQEBCwUAA4IB
+AQBdZqzyOgofd1KXhMfq+2LM2wG/JPHojwtrd8ubMWFuzON9lqlBTuIRCNuMPtnZ
+7NeC9wuU2mthqsCsw0D78k5YHj57RLfUWKl0Rsa9/06iKoW7pIogrSwHAVTQXuwq
+ekjUNfk90XNCKw7whoU4m3MffSDJvl4jsS9sziG08Wp/t8oBB7GrhwKH9b2wNvKB
+R8aHopZUODIqFf9+MHdX/H57UfRJL4tYnDTkWWvcgVt4bFN5IHhl2iqS3RiAmO9F
+GyOdrGyG+zlO94oTd0/SG0mU7OljR2C3+PSbS8zRfyClC3nNuCLc632s0GU2vinv
+13sikthsHZ+8N8EB2d8yu0BZ
+-----END CERTIFICATE-----
+key_id           3f1ade4e-c058-e0f3-3061-3083cf19442d
+key_name         n/a
+serial_number    78:0b:17:7d:34:bd:ea:bd:be:92:74:a0:78:64:75:0d:10:39:e6:2f
+/ $ 

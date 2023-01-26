@@ -1,0 +1,22 @@
+
+replicaCount: 1
+
+
+database: 
+  secretName: keycloak-db-secret
+  username: admin
+  password: blueadmin
+  host: postgres.database
+  vendor: postgres
+
+
+ingress:
+  enabled: false
+
+
+hosts:
+
+tls:
+  host: keycloak.centralizer.io
+  secretName: keycloak-tls
+

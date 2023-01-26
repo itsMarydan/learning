@@ -1,0 +1,33 @@
+apiVersion: security.istio.io/v1beta1
+kind: "RequestAuthentication"
+metadata:
+  name: demo-jwt
+spec:
+  selector:
+    matchLabels:
+      app: demo-svc
+  jwtRules:
+    - outputPayloadToHeader: authtoken
+      issuer: "https://keycloak.centralizer.io/realms/demo"
+      jwksUri: "https://keycloak.centralizer.io/realms/demo/protocol/openid-connect/certs"
+
+---
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: demo-get
+spec:
+  selector:
+    matchLabels:
+      app: demo-svc
+  action: ALLOW
+  rules:
+  - to:
+    - operation:
+        methods: ["GET"]
+    when:
+      - key: request.auth.claims[iss]
+        values: ["https://keycloak.centralizer.io/realms/demo"]
+
+
+

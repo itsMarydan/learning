@@ -1,0 +1,8 @@
+1. Login with the below Credetials
+
+
+export USER=$(kubectl get secret keycloak-initial-admin -o jsonpath='{.data.username}' | base64 --decode)
+export PWD=$(kubectl get secret keycloak-initial-admin -o jsonpath='{.data.password}' | base64 --decode)
+
+echo USER:$USER
+echo PWD:$PWD

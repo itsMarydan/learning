@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  proxy
+  labels:
+    name:  proxy
+    app: proxy-svc
+    use: proxy
+    version: v1.0.0 
+spec:
+  selector:
+    matchLabels:
+      name: proxy
+      app: proxy-svc
+      use: proxy
+      version: v1.0.0
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        name:  proxy
+        app: proxy-svc
+        use: proxy
+        version: v1.0.0
+    spec:
+      containers:
+      - image:  blueinit/proxy:1.0.2
+        imagePullPolicy: IfNotPresent
+        name:  proxy
+        resources:
+          limits:
+            cpu: 200m
+            memory: 1Gi
+          requests:
+            cpu: "100m"
+            memory: "256Mi"                
+        ports:
+        - containerPort:  8080
+          name:  default
+        volumeMounts:
+        - mountPath: /data
+          name: data
+      restartPolicy: Always    
+      serviceAccountName: proxy
+      volumes:
+        - name: data
+          emptyDir: {}
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: proxy
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: proxy-svc
+spec:
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8080
+  selector:
+    app: proxy-svc

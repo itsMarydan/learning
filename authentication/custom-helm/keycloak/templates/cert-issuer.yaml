@@ -1,0 +1,27 @@
+# apiVersion: cert-manager.io/v1
+# kind: Issuer
+# metadata:
+#   name: keycloak-issuer
+#   namespace: {{ .Release.Namespace }}
+# spec:
+#   selfSigned: {}
+
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: keycloak-certificate
+  namespace: {{ .Release.Namespace }}
+spec:
+  isCA: true
+  commonName:  {{ .Values.tls.host }}
+  secretName: {{ .Values.tls.secretName }}
+  privateKey:
+    algorithm: ECDSA
+    size: 256
+  issuerRef:
+    name: vault-issuer
+  dnsNames:
+  - {{  .Values.tls.host }}
+  
+

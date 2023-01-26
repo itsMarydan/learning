@@ -1,0 +1,28 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: spike-issuer
+  namespace: {{ .Release.Namespace }}
+spec:
+  selfSigned: {}
+
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: spiike-certificate
+  namespace: {{ .Release.Namespace }}
+spec:
+  isCA: true
+  commonName:  {{ .Values.tls.host }}
+  secretName: {{ .Values.tls.secretName }}
+  privateKey:
+    algorithm: ECDSA
+    size: 256
+  issuerRef:
+    name: spike-issuer       
+    kind: Issuer
+    group: cert-manager.io
+  dnsNames:
+  - {{  .Values.tls.host }}
+

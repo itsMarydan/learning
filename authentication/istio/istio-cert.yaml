@@ -1,0 +1,17 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: internal-certificate
+  namespace: istio-system
+spec:
+  isCA: true
+  commonName:  "*.centralizer.io"
+  secretName: internal-certificate
+  privateKey:
+    algorithm: ECDSA
+    size: 256
+  issuerRef:
+    name: istio-issuer
+  dnsNames:
+  - "*.centralizer.io"

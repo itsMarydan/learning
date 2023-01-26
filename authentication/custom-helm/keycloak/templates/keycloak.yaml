@@ -1,0 +1,21 @@
+apiVersion: k8s.keycloak.org/v2alpha1
+kind: Keycloak
+metadata:
+  name: keycloak
+spec:
+  instances: {{ .Values.replicaCount }}
+  ingress:
+    enabled: {{ .Values.ingress.enabled }}
+  db:
+    vendor: {{ .Values.database.vendor }}
+    host: {{ .Values.database.host }}
+    usernameSecret:
+      name: {{ .Values.database.secretName  }}
+      key: username
+    passwordSecret:
+      name: {{ .Values.database.secretName  }}
+      key: password
+  http:
+    tlsSecret: {{ .Values.tls.secretName }}
+  hostname:
+    hostname: {{ .Values.tls.host }}
